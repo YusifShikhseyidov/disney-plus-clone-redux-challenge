@@ -101,10 +101,20 @@ const Nav= styled.div.attrs({
   display: flex;
   align-items: center;
   padding: 0 36px;
+
+
+  @media (min-width: 2560px){
+    height: 150px;
+  }
 `
 
 const Logo = styled.img`
   width: 90px;
+
+  @media (min-width: 2560px){
+    width: 140px;
+    margin-left: 40px;
+  }
 `
 
 const NavMenu = styled.div.attrs({
@@ -173,6 +183,11 @@ const Login = styled.div`
   &:hover{
     background-color: #f9f9f9;
     color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media (min-width: 2560px){
+    padding: 24px 54px;
+    font-size: 25px;
   }
 `
 

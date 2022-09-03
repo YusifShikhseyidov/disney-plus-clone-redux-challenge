@@ -48,6 +48,24 @@ const Container = styled.div.attrs({
         margin: 20px 0 20px 45px;
 
     }
+
+    @media (max-width: 768px){
+        h4{
+            margin: 20px 0 20px 0;
+        }
+    }
+    @media (max-width: 1024px){
+        h4{
+            margin: 20px 0 20px 17px;
+        }
+    }
+
+    @media (max-width: 2560px){
+        h4{
+            margin: 20px 0 31px 35px;
+            font-size: 25px;
+        }
+    }
 `
 
 const Content = styled.div`
@@ -55,14 +73,26 @@ const Content = styled.div`
     grid-template-columns: repeat(4, minmax(0, 1fr));
     justify-items: center;
     grid-gap: 20px;
+
+    
+
+    @media screen and (min-width: 601px){
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+    }
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(0, 1fr));
+    }
 `
 
 const Wrapper = styled.div`
-    width: 250px;
+    width: 7rem;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
-    border: 3px solid rgb(249, 249, 249, 0.2);
+    border: 3px solid rgba(249, 249, 249, 0.2);
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
                 rgb(0 0 0 / 77%) 0px 16px 10px -10px;
     transition-duration: 300ms;
@@ -76,5 +106,25 @@ const Wrapper = styled.div`
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
+    }
+
+    @media screen and (max-width: 600px){
+        width: 20rem;
+    }
+
+    @media screen and (min-width: 601px){
+        width: 8rem;
+    }
+
+    @media screen and (min-width: 1024px){
+        width: 190px;
+    }
+
+    @media screen and (min-width: 1440px){
+        width: 295px;
+    }
+
+    @media screen and (min-width: 2560px){
+        width: 511px;
     }
 `

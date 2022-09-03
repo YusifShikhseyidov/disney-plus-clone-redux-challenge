@@ -34,16 +34,22 @@ const Container = styled.div.attrs({
     margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    grid-gap: 10px;
+    grid-template-rows: 1fr;
+    grid-gap: 26px;
     justify-items: center;
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(0, 1fr));
+    }
 `
 
 const Wrapper= styled.div.attrs({
     className: 'channelWrapper'
 })`
     
-    width: 70%;
-    border: 3px solid rgb(249, 249, 249, 0.2);
+    // width: 85rem;
+    border: 3px solid rgba(249, 249, 249, 0.2);
     border-radius: 20px;
     cursor: pointer;
     backface-visibility: hidden;
@@ -63,7 +69,6 @@ const Wrapper= styled.div.attrs({
         // }
     }
 
-
     img{
         width: 100%;
         object-fit: cover;
@@ -80,4 +85,8 @@ const Wrapper= styled.div.attrs({
     //     z-index: -1;
     //     visibility: hidden;
     // }
+
+    @media screen and (max-width: 600px){
+        width: 20rem;
+    }
 `
